@@ -1,0 +1,166 @@
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 2%;
+    }
+    
+    .class-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 90%;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    
+    .example-card {
+        width: calc(50% - 20px);
+        margin: 10px;
+        height: 50%;
+        position: relative;
+    }
+    
+    .example-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-button {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    .title {
+        padding: 10px;
+        font-size: large;
+    }
+    
+    .divider {
+        padding: 2px;
+        border-width: 3px;
+        color: black !important;
+    }
+    
+    .h3 {
+        font-weight: 500;
+    }
+    
+    .example-card-icon,
+    .expense-icon,
+    .todo-icon {
+        color: white;
+        font-size: 24px;
+        border-radius: 32px;
+        padding: 10px;
+        transition: color 0.3s, background-color 0.3s;
+    }
+    
+    .example-card-icon:hover,
+    .expense-icon:hover,
+    .todo-icon:hover {
+        color: navy;
+        background-color: burlywood;
+    }
+    
+    .example-card-icon {
+        background-color: rgb(176, 173, 173);
+    }
+    
+    .expense-icon {
+        background-color: rgb(233, 96, 96);
+    }
+    
+    .todo-icon {
+        background-color: cyan;
+    }
+    
+    .transaction-item {
+        display: flex;
+        align-items: center;
+    }
+    
+    .transaction-status {
+        margin-right: 8px;
+    }
+    
+    .transaction-details {
+        flex-grow: 1;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .example-card {
+            width: calc(100% - 20px);
+        }
+    }
+    
+    .contentincome {
+        display: flex;
+        align-items: center;
+    }
+    
+    .icon-title-container {
+        display: flex;
+        align-items: center;
+    }
+    
+    .example-card-icons {
+        color: white;
+        font-size: 24px;
+        background-color: rgb(176, 173, 173);
+        border-radius: 32px;
+        padding: 10px;
+        margin-top: 5px;
+        margin-right: 10px;
+    }
+    
+    .titleincome {
+        font-size: 16px;
+    }
+    
+    .icon-title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .example-card-icon {
+        border-radius: 32px;
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+    
+    .example-card-icon.totalicon {
+        background-color: #eb1aba;
+        border-radius: 50%;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .example-card-icon.totalicon:hover {
+        background-color: #ff5ab9;
+    }
+    
+    .titles {
+        font-size: 14px;
+    }

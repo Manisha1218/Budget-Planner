@@ -1,0 +1,46 @@
+<!-- Inside your HTML file -->
+<div class="navbar">
+    <h2>BUDGET PLANNER</h2>
+</div>
+
+<div class="login-container">
+    <!-- Login -->
+    <form *ngIf="activeForm === 'login'" [formGroup]="loginForm" (ngSubmit)="login()" class="form">
+        <h2>Login</h2>
+        <!-- Decoration -->
+    
+        <!-- End of Decoration -->
+        <mat-form-field class="form-group">
+            <input matInput type="email" formControlName="email" placeholder="Email" class="custom-input" />
+        </mat-form-field>
+        <mat-form-field class="form-group">
+            <input matInput type="password" formControlName="password" placeholder="Password" class="custom-input" />
+        </mat-form-field>
+        <button mat-raised-button type="submit" class="login-button">Login</button>
+        
+        <p (click)="toggleForm('register')">Don't have an account?
+            <span class="highlighted">Register</span>
+        </p>
+    </form>
+
+    <!-- Register -->
+    <form *ngIf="activeForm === 'register'" [formGroup]="registerForm" (ngSubmit)="register()" class="form">
+        <h2>Register</h2>
+        <!-- Decoration -->
+
+        <!-- End of Decoration -->
+        <mat-form-field class="form-group">
+            <input matInput type="text" formControlName="username" placeholder="Username" class="custom-input" />
+        </mat-form-field>
+        <mat-form-field class="form-group">
+            <input matInput type="email" formControlName="email" placeholder="Email" class="custom-input" />
+        </mat-form-field>
+        <mat-form-field class="form-group">
+            <input matInput type="password" formControlName="password" placeholder="Password" class="custom-input" />
+        </mat-form-field>
+        <button mat-raised-button type="submit" class="register-button">Register</button>
+        <p (click)="toggleForm('login')">Already have an account?
+            <span class="highlighted">Login</span>
+        </p>
+    </form>
+</div>

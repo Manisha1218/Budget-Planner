@@ -1,0 +1,114 @@
+// .notification-container {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+// }
+// .notification-controls {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 20px;
+// }
+// .notification-item {
+//     display: flex;
+//     align-items: start;
+//     padding: 10px;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     background-color: #f9f9f9;
+//     cursor: pointer;
+//     transition: background-color 0.2s ease;
+// }
+// .notification-item:hover {
+//     background-color: #f1f1f1;
+// }
+// .notification-icon {
+//     font-size: 1.5em;
+//     color: #ff5c5c;
+//     margin-right: 10px;
+// }
+// .notification-content {
+//     display: flex;
+//     flex-direction: column;
+// }
+// .notification-title {
+//     font-weight: bold;
+//     font-size: 1em;
+//     color: #333;
+// }
+// .notification-description {
+//     font-size: 0.9em;
+//     color: #666;
+// }
+h2 {
+    color: #292b75;
+    border: solid black;
+}
+
+.dropdown-content {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notification-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Two columns for a grid-like structure */
+    gap: 20px;
+}
+
+.notification-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+    background-color: #f1f1f1;
+}
+
+.notification-icon {
+    font-size: 1.2em;
+    color: #b70082;
+    /* Matches the icon color from your example */
+    margin-right: 10px;
+}
+
+.notification-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 1em;
+    color: #292b75;
+    /* Matches the title color from your example */
+}
+
+.notification-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.dropdown {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: #333;
+    font-size: 0.9em;
+}

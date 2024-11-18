@@ -1,0 +1,25 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav #sidebar mode="side" opened="true">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <div class="toolbar">
+                <mat-toolbar>
+                    <button mat-icon-button aria-label="Example icon button with a vertical three dot icon" (click)="sidebar.toggle()">
+                    <mat-icon>menu</mat-icon>
+                   
+                  </button>
+                    <div class="box">
+                        <mat-icon class="icon-button" (click)="navigateTo('bookmark')">bookmark</mat-icon>
+                        <mat-icon class="icon-button" (click)="navigateTo('mail')">nature_people </mat-icon>
+                    </div>
+
+                </mat-toolbar>
+            </div>
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,114 @@
+/* Add animation to input fields */
+
+.animated-input input:focus {
+    border-color: #ff9800;
+    /* Change border color on focus */
+    animation: input-highlight 0.5s ease;
+    /* Animation effect */
+}
+
+@keyframes input-highlight {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.profile-form {
+    max-width: 600px;
+    /* Adjust maximum width as needed */
+    margin: 20px auto;
+    /* Center the form horizontally */
+    padding: 20px;
+    /* Add padding to the form */
+    border: 2px solid #000000;
+    /* Add border to the form */
+    border-radius: 10px;
+    /* Add border radius for rounded corners */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    /* Adjust margin between rows */
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+    /* Adjust margin between form fields */
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+input.mat-input,
+.mat-select {
+    background-color: #f5f5f5;
+    /* Background color for input fields */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding */
+}
+
+.mat-select-arrow {
+    color: #555;
+    /* Color of select arrow */
+}
+
+
+/* Add border and box shadow to form fields on focus */
+
+.mat-form-field.mat-focused {
+    border-color: #007bff;
+    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add box shadow on focus */
+}
+
+
+/* Add animation to input fields */
+
+button[type="submit"] {
+    margin-top: 20px;
+    /* Adjust margin above the submit button */
+    background-color: #007bff;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    /* Remove border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 0;
+    /* Padding */
+    width: 100%;
+    /* Make button fill full width */
+    cursor: pointer;
+    /* Cursor style */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Button background color on hover */
+}
+
+
+/* Add border and box shadow to form fields on focus */
+
+.mat-form-field.mat-focused {
+    border-color: #007bff;
+    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add box shadow on focus */
+}

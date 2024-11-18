@@ -1,0 +1,120 @@
+.user-card {
+  width: 100%; /* Adjust as needed */
+  margin: auto; /* Center the card horizontally */
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+ .card-main{
+  padding: 5%;
+ }
+.card-content {
+  padding: 16px;
+}
+
+.name {
+  margin-top: 0; font-size: 1.2rem;    color: #333;  margin-bottom: 8px;
+   
+}
+
+.mail {
+  font-size: 0.7rem;
+  color: #666; margin: 0;
+     margin-top: -16px;
+}
+
+.user img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    
+  padding: auto;
+    /* Add a 3px solid black border */
+}
+
+
+
+.custom-icon {
+    font-size: 24px;
+    background-image: linear-gradient(to bottom, #fff,white);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    animation: pulse 1s infinite alternate; 
+    padding-top: 10%;
+    padding-right: 10%;
+    cursor: grab;
+  
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.2);
+      }
+    }
+  }
+  
+  .menu-head {
+    color: navy;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to bottom, #fff, #ddd); /* Adjust colors as needed */
+  }
+ .menu-item{
+  margin: 0 10px 0 10px;
+  .menu-button{
+    overflow: hidden;
+    display:flex  ;align-items: center;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    cursor: pointer;;
+    text-align: left;
+    background-color: transparent !important;
+    border: none !important;
+    height: 30px;
+    line-height: 30px;
+    margin-bottom:  15px;   transition: color 0.3s ease;
+    .menu-button:hover {
+      background-color: #444; /* Hover background color */
+    }
+  }
+ }
+ 
+ .menu-button:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust the hover color here */
+  z-index: -1;
+}
+.menu-button mat-icon {
+  margin-right: 10px; /* Adjust icon spacing */
+  background-image: linear-gradient(to bottom, #fff,white);
+}
+ .menu-button span {
+  color:navy;
+ 
+  font-weight: 700;
+  font-size: 100%;
+  letter-spacing: 1px;
+ }
+ .menu-button.selected:hover {
+  /* Add hover effect for the selected item */
+  /* Example: Change text color */
+  color: #fff;
+  background-color: #007bff; /* Example: Change background color */
+  /* Add any other styles for hover effect */
+}

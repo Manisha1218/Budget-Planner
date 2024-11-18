@@ -1,0 +1,78 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Login Container Styles */
+.login-container {
+    margin: 50px auto;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.custom-input {
+    width: 100%;
+}
+
+.login-button, .register-button {
+    margin-bottom: 3%;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;align-items: center;
+    
+}
+
+.login-button:hover, .register-button:hover {
+    background-color: #2980b9;
+}
+
+.highlighted {
+    color: #3498db;
+    cursor: pointer;
+}
+
+/* Decoration */
+.decoration {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .login-container {
+        width: 90%;
+    }
+}

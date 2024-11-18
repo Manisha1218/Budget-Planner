@@ -1,0 +1,47 @@
+<!-- <h2 class="title">
+    Bookmarked Items</h2>
+<div class="budget-list">
+    <div *ngFor="let item of budgetItems" class="budget-item">
+        <span class="item-name">{{ item.name }}</span>
+        <button (click)="toggleBookmark(item)" title="Toggle Bookmark" class="bookmark-btn">
+            {{ isBookmarked(item) ? '🔖' : '📌' }}
+        </button>
+    </div>
+</div>
+
+<ng-template #noBookmarks>
+    <p class="no-bookmarks">No bookmarks added.</p>
+</ng-template> -->
+
+<h2 class="title">Bookmarked Items</h2>
+
+<div class="bookmark-container">
+    <p class="intro-text">
+        Here’s a list of your bookmarked budget items. You can toggle the bookmark status by clicking on the icon.
+    </p>
+
+    <!-- Bookmarked Items List -->
+    <div class="budget-list">
+        <div *ngFor="let item of budgetItems" class="budget-item">
+            <div class="item-details">
+                <span class="item-name">{{ item.name }}</span>
+                <span class="item-category">Category: {{ item.category || 'General' }}</span>
+                <span class="item-date">Added on: {{ item.dateAdded | date }}</span>
+            </div>
+            <button (click)="addItem(item)" class="add-item-btn" title="Add Item">
+                {{'➕ Add Item' }}
+            </button>
+            <!-- <button (click)="toggleBookmark(item) " title="Toggle Bookmark " class="bookmark-btn ">
+                {{ isBookmarked(item) ? '🔖 Remove Bookmark' : '📌 Add to Bookmarks' }}
+            </button> -->
+        </div>
+    </div>
+
+    <!-- No Bookmarks Message -->
+    <ng-template #noBookmarks>
+        <div class="no-bookmarks-container ">
+            <p class="no-bookmarks ">No bookmarks added yet. Start bookmarking your favorite items!</p>
+            <button class="add-item-btn " (click)="navigateToAddItem() ">Add New Budget Item</button>
+        </div>
+    </ng-template>
+</div>

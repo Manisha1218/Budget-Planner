@@ -1,0 +1,60 @@
+/* logout-confirmation-dialog.component.css */
+
+  .dialog-title {
+    margin-top:     20px;
+    width: 400px;
+    font-size: 24px;
+    color: #333;
+    padding: 10px 20px;
+  }
+  
+  .dialog-content {
+   
+    padding: 20px;
+  }
+  
+  .dialog-content p {
+    margin-left: 10px;
+    font-size: 20px; /* Example font size */
+    color: #000000; /* Example color */
+    font-weight: normal; /* Example font weight */
+    line-height: 1.5; /* Example line height */
+  }
+  
+  
+  .dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+  
+  .cancel-button {
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+  }
+  
+  .logout-button {
+    border-radius: 6px;
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #FF6347;
+    border-color: #FF6347;
+  }
+  

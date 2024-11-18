@@ -1,0 +1,128 @@
+<h2>
+    Retirement And Pension Budget</h2>
+<div class="notification-container" id="notification-container">
+    <div class="notification-controls">
+
+        <!-- Auto Enrolment -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('autoEnrolment')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Auto Enrolment</span>
+                <span class="notification-description">
+          Introduction, how it works, all about contributions.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.autoEnrolment.visible" class="dropdown-content">
+                    <p>Additional detailed content for Auto Enrolment...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Building Your Retirement Pot -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('buildingRetirementPot')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Building Your Retirement Pot</span>
+                <span class="notification-description">
+          How much do you need, ways to build your pot, transferring and merging.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.buildingRetirementPot.visible" class="dropdown-content">
+                    <p>Additional detailed content for Building Your Retirement Pot...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pension Basics -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('pensionBasics')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Pension Basics</span>
+                <span class="notification-description">
+          Starting a pension, types of pension, understanding pensions.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.pensionBasics.visible" class="dropdown-content">
+                    <p>Additional detailed content for Pension Basics...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pension Problems -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('pensionProblems')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Pension Problems</span>
+                <span class="notification-description">
+          Complaints, financial help when retired, changes to schemes.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.pensionProblems.visible" class="dropdown-content">
+                    <p>Additional detailed content for Pension Problems...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- State Pension -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('statePension')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">State Pension</span>
+                <span class="notification-description">
+          How it works, what you might get, National Insurance.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.statePension.visible" class="dropdown-content">
+                    <p>Additional detailed content for State Pension...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taking Your Pension -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('takingPension')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Taking Your Pension</span>
+                <span class="notification-description">
+          Ways to draw your pension, when can you retire, Pension Wise appointments.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.takingPension.visible" class="dropdown-content">
+                    <p>Additional detailed content for Taking Your Pension...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tax and Pensions -->
+        <div class="notification-item" (click)="toggleDropdown('taxAndPensions')">
+            <span class="notification-icon">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Tax and Pensions</span>
+                <span class="notification-description">
+                Tax allowances, tax paid on pensions, tax relief.
+              </span>
+                <!-- Dropdown content that is conditionally displayed based on the visibility state -->
+                <div *ngIf="notifications.taxAndPensions.visible" class="dropdown-content">
+                    <p>Additional detailed content for Tax and Pensions...</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Pensions and Retirement -->
+        <div class="notification-item">
+            <span class="notification-icon" (click)="toggleDropdown('pensionsAndRetirement')">➡️</span>
+            <div class="notification-content">
+                <span class="notification-title">Pensions and Retirement</span>
+                <span class="notification-description">
+          All guidance, including how to use the Pension Wise service.
+        </span>
+                <!-- Dropdown content -->
+                <div *ngIf="notifications.pensionsAndRetirement.visible" class="dropdown-content">
+                    <p>Additional detailed content for Pensions and Retirement...</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

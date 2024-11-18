@@ -1,0 +1,112 @@
+<div class="container">
+    <mat-toolbar color="primary">
+        <span>Expense Details</span>
+    </mat-toolbar>
+    <div class="row">
+        <div class="column">
+            <mat-card class="custom-card">
+                <mat-card-header>
+                    <mat-card-title>Expense</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="content">
+                    <form [formGroup]="incomeForm" (ngSubmit)="onSubmit()">
+                        <div class="row">
+                            <div class="column">
+                                <mat-form-field class="select-field">
+                                    <mat-label>Select Month</mat-label>
+                                    <mat-select name="month" id="month" formControlName="month" (selectionChange)="onChange($event)">
+                                        <mat-option value="January">January</mat-option>
+                                        <mat-option value="February">February</mat-option>
+                                        <mat-option value="March">March</mat-option>
+                                        <mat-option value="April">April</mat-option>
+                                        <mat-option value="May">May</mat-option>
+                                        <mat-option value="June">June</mat-option>
+                                        <mat-option value="July">July</mat-option>
+                                        <mat-option value="August">August</mat-option>
+                                        <mat-option value="September">September</mat-option>
+                                        <mat-option value="October">October</mat-option>
+                                        <mat-option value="November">November</mat-option>
+                                        <mat-option value="December">December</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="column">
+                                <mat-form-field class="select-field">
+                                    <mat-label>Investments</mat-label>
+                                    <mat-select name="investments" id="investments" formControlName="investments" [class.disabled-dropdown]="!selectedMonth">
+                                        <mat-option value="401(k)">401(k)</mat-option>
+                                        <mat-option value="Stocks">Stocks</mat-option>
+                                        <mat-option value="Real Estate">Real Estate</mat-option>
+                                        <mat-option value="Gym">Gym</mat-option>
+
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <div class="column">
+                                <mat-form-field class="select-field">
+                                    <mat-label>Source</mat-label>
+                                    <mat-select name="source" id="source" formControlName="source" [class.disabled-dropdown]="!selectedMonth">
+                                        <mat-option value="Rent">Rent</mat-option>
+                                        <mat-option value="Grocery">Grocery</mat-option>
+                                        <mat-option value="Essential">Essential</mat-option>
+                                        <!-- Add more options for other years -->
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <input matInput class="input-field" formControlName="amount" type="number" placeholder="Enter Amount" name="amount" id="amount" [class.disabled-dropdown]="!selectedMonth">
+
+                        <div class="button-container">
+                            <button mat-raised-button color="primary" type="submit" (click)="onSubmit()" [class.disabled-dropdown]="!selectedMonth">Add</button>
+                        </div>
+                    </form>
+
+                    <div class="row">
+                        <div class="column">
+                            <p class="income">Total Expense for {{ selectedMonth }}: ${{ calculateTotalIncome(selectedMonth) }}</p>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="column">
+            <mat-card class="table-card">
+                <mat-card-header>
+                    <mat-card-title>Expense List - {{ selectedMonth }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="new">
+                    <!-- Your Material table content here -->
+
+                    <div style="height: 300px; overflow-y: auto;">
+                        <table mat-table [dataSource]="getFilteredIncomes()" class="mat-elevation-z8">
+                            <!-- Table content -->
+                            <ng-container matColumnDef="source">
+                                <th mat-header-cell *matHeaderCellDef> Expense </th>
+                                <td mat-cell *matCellDef="let element"> {{ element.source }} </td>
+                            </ng-container>
+                            <ng-container matColumnDef="amount">
+                                <th mat-header-cell *matHeaderCellDef> Amount </th>
+                                <td mat-cell *matCellDef="let element"> {{ element.amount }} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="['source', 'amount', ]"></tr>
+                            <tr mat-row *matRowDef="let row; columns: ['source', 'amount',]"></tr>
+                        </table>
+                    </div>
+
+
+
+
+
+                </mat-card-content>
+                <div class="button-container">
+                    <button mat-raised-button (click)="onBack()" class="back-button mr-2">Back</button>
+                    <button mat-raised-button (click)="saveForm()" class="save-button ml-2">Save</button>
+                </div>
+
+
+            </mat-card>
+        </div>
+    </div>
+</div>

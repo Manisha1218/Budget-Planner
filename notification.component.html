@@ -1,0 +1,21 @@
+<div *ngFor="let notification of notifications | keyvalue">
+    <div class="notification-item">
+        <!-- Button to toggle visibility -->
+        <span class="notification-icon" (click)="toggleDropdown(notification.key)">
+        ➡️
+      </span>
+
+        <!-- Notification content -->
+        <div class="notification-content">
+            <span class="notification-title">{{ notification.value.title }}</span>
+            <span class="notification-description">
+          {{ notification.value.description }}
+        </span>
+
+            <!-- Dropdown content (only visible when notification.visible is true) -->
+            <div *ngIf="notification.value.visible" class="dropdown-content">
+                <p>Additional detailed content for {{ notification.value.title }}...</p>
+            </div>
+        </div>
+    </div>
+</div>

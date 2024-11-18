@@ -1,0 +1,27 @@
+<div class="navbar">
+    <div class="top">
+        <div style="display: flex; justify-content: flex-end;">
+            <mat-icon class="custom-icon">notifications_active</mat-icon>
+        </div>
+
+    </div>
+    <div class="card-main">
+        <mat-card class="user-card">
+            <img src="https://cdn.pixabay.com/photo/2023/09/16/21/31/girl-8257551_1280.jpg" alt="">
+            <div class="card-content">
+                <h2 class="name">Manisha Verma</h2>
+                <p class="mail">manisha563&#64;gmail.com</p>
+            </div>
+        </mat-card>
+    </div>
+
+    <div class="menu-item">
+        <ng-container *ngFor="let item of menuItems">
+            <button mat-button class="menu-button" [ngClass]="{'selected': selectedItem === item.route}" (click)="navigateTo(item.route)">
+            <mat-icon>{{item.icon}}</mat-icon>
+            <span>{{item.label}}</span>
+          </button>
+        </ng-container>
+    </div>
+
+</div>

@@ -1,0 +1,40 @@
+mat-sidenav {
+    width: 230px;
+    height: 100%;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+mat-sidenav-content {
+    height: 100vh;
+}
+
+mat-toolbar {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    .mat-icon {
+        margin-left: 15px;
+        color: white;
+    }
+    justify-content: space-between;
+    .box {
+        margin-top: 15px;
+        .mat-icon {
+            color: black;
+        }
+    }
+}
+
+.box {
+    display: flex;
+    gap: 16px;
+}
+
+.icon-button {
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    color: #3f51b5;
+}

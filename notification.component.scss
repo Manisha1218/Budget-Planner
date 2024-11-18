@@ -1,0 +1,34 @@
+.notification-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.notification-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.notification-content {
+    margin-left: 10px;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.notification-description {
+    font-size: 14px;
+}
+
+.dropdown-content {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}

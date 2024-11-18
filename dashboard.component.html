@@ -1,0 +1,87 @@
+<router-outlet>
+</router-outlet>
+<div class="container">
+    <div class="class-container">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div class="header-content">
+                    <mat-icon class="example-card-icon">attach_money</mat-icon>
+                    <mat-card-title class="title">Income</mat-card-title>
+                </div>
+            </mat-card-header>
+            <mat-divider class="divider"></mat-divider>
+            <mat-card-content>
+                <mat-card-subtitle>Last Few Months</mat-card-subtitle>
+                <ul>
+                    <li *ngFor="let monthIncome of lastMonthsIncome">{{ monthIncome }}</li>
+                </ul>
+                <h3 class="h3">{{ currentmonthicome }}</h3>
+
+                <button mat-button class="card-button" (click)="onIncomeView()">view</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div class="header-content">
+                    <mat-icon class="example-card-icon expense-icon">money_off</mat-icon>
+                    <mat-card-title class="title">Expense</mat-card-title>
+                </div>
+            </mat-card-header>
+            <mat-divider class="divider"></mat-divider>
+            <mat-card-content>
+                <mat-card-subtitle>Last Few Months</mat-card-subtitle>
+                <ul>
+                    <li *ngFor="let monthIncome of lastMonthsexpense">{{ monthIncome }}</li>
+                </ul>
+                <h3 class="h3">{{ currentmonthisexpense }}</h3>
+                <button mat-button class="card-button" (click)="onExpenseView()">view</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div class="header-content">
+                    <mat-icon class="example-card-icon todo-icon">assignment</mat-icon>
+                    <mat-card-title class="title">To Do Transactions</mat-card-title>
+                </div>
+            </mat-card-header>
+            <mat-divider class="divider"></mat-divider>
+            <mat-card-content>
+                <div class="transaction-item" *ngFor="let item of todoTransactions">
+                    <span class="transaction-status">
+                        <mat-icon>hourglass_empty</mat-icon>
+                    </span>
+                    <span class="transaction-details">
+                        {{ item.description }}
+                    </span>
+                </div>
+                <button mat-button class="card-button" (click)="ontodoView()">view</button>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div class="header-content">
+                    <mat-icon class="example-card-icon">timeline</mat-icon>
+                    <mat-card-title class="title">Total Income</mat-card-title>
+                </div>
+            </mat-card-header>
+            <mat-divider class="divider"></mat-divider>
+            <mat-card-content>
+
+                <div class="icon-title-container">
+                    <mat-icon class="example-card-icon">attach_money</mat-icon>
+                    <mat-card-title class="titles">Current Month Income ${{ currentmonthicomes }}</mat-card-title>
+                </div>
+
+                <div class="icon-title-container">
+                    <mat-icon class="example-card-icon expense-icon">money_off</mat-icon>
+                    <mat-card-title class="titles">Current Month Expense ${{ currentmonthisexpenses }}</mat-card-title>
+                </div>
+                <mat-divider class="divider"></mat-divider>
+                <div class="icon-title-container">
+                    <mat-icon class="example-card-icon totalicon">account_balance_wallet</mat-icon>
+                    <mat-card-title class="titles">Current Month Savings ${{ CurrentMonthSavings }}</mat-card-title>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

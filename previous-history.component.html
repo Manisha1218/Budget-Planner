@@ -1,0 +1,42 @@
+<div class="main-container">
+  <div class="container">
+    <h2>Transaction History</h2>
+    <form [formGroup]="todoForm" (ngSubmit)="onSubmitExpense()" class="input-form">
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Select Month</mat-label>
+          <mat-select formControlName="month" id="month" (selectionChange)="onChangeExpense($event)">
+            <mat-option disabled>Select Month</mat-option>
+            <mat-option value="January">January</mat-option>
+            <mat-option value="February">February</mat-option>
+            <mat-option value="March">March</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-group"></div>
+      <div class="total-todoTrans">
+        Transactions for {{ selectedMonth }}: ${{ calculateTotalExpense(selectedMonth) }}
+      </div>
+    </form>
+    <hr>
+    <h3>Transaction History List - {{ selectedMonth }}</h3>
+    <table mat-table class="table">
+      <ng-container matColumnDef="transactionType">
+        <th mat-header-cell *matHeaderCellDef> Transaction Type </th>
+        <td mat-cell *matCellDef="let todoTrans"> {{ todoTrans.expenseType }} </td>
+      </ng-container>
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef> Amount </th>
+        <td mat-cell *matCellDef="let todoTrans"> {{ todoTrans.expenseAmount }} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="['transactionType', 'amount']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['transactionType', 'amount']"></tr>
+    </table>
+    <div class="input-form">
+      <div class="form-group"></div>
+      <div class="form-group"></div>
+      <button mat-button color="primary" (click)="onBack()" class="custom-button">Back</button>
+      
+    </div>
+  </div>
+</div>

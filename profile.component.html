@@ -1,0 +1,69 @@
+<div class="profile-form">
+    <h2>User Profile</h2>
+    <form (ngSubmit)="onSubmit()" class="form" [formGroup]="profileForm">
+        <div class="form-row">
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Name:</mat-label>
+                    <input matInput type="text" formControlName="name" placeholder="Enter your name" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Age:</mat-label>
+                    <input matInput type="number" formControlName="age" placeholder="Enter your age" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Date of Birth:</mat-label>
+                    <input matInput [matDatepicker]="dobPicker" formControlName="dob" placeholder="Select your date of birth" required>
+                    <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+                    <mat-datepicker #dobPicker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Repeat similar structure for other form rows -->
+        <div class="form-row">
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Gender:</mat-label>
+                    <mat-select formControlName="gender" required>
+                        <mat-option value="" disabled>Select Gender</mat-option>
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="female">Female</mat-option>
+                        <mat-option value="other">Other</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Email:</mat-label>
+                    <input matInput type="email" formControlName="email" placeholder="Enter your email" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Occupation:</mat-label>
+                    <input matInput type="text" formControlName="occupation" placeholder="Enter your occupation" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <!-- Repeat similar structure for other form rows -->
+        <div class="form-row">
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Contact:</mat-label>
+                    <input matInput type="text" formControlName="contact" placeholder="Enter your contact number" required>
+                </mat-form-field>
+            </div>
+            <div class="form-group">
+                <mat-form-field appearance="fill" class="animated-input">
+                    <mat-label>Address:</mat-label>
+                    <input matInput type="text" formControlName="address" placeholder="Enter your address" required>
+                </mat-form-field>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Save</button>
+    </form>
+</div>
